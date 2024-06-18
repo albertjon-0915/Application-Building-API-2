@@ -68,3 +68,16 @@ module.exports.Login = (req, res) => {
                .catch((err) => errorHandler(err, req, res));
      }
 };
+
+module.exports.getUser = (req, res) => {
+     User.findById(req.user.id)
+          .then((result) => {
+               if (!result) {
+                    return res.status(404).send({
+                         message: "No user found",
+                    });
+               }
+               return res.status(200).send(result);
+          })
+          .catch((err) => errorHandler(err, req, res));
+};
