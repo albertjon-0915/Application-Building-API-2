@@ -9,7 +9,7 @@ const moviesRoutes = require("./Routes/Movies.js");
 const app = express();
 
 const corsOptions = {
-     origin: ["http://localhost:4000", 'http://localhost:3000', 'https://application-building-api-2.onrender.com'],
+     origin: ["http://localhost:4000", 'http://localhost:3000','https://application-building-full-stack-react-2.vercel.app', 'https://application-building-api-2.onrender.com'],
      credentials: true,
      optionSuccessStatus: 200,
 };
